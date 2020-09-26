@@ -13,8 +13,11 @@ public class SnakeLadder{
 		int position = 0;
 		System.out.println("Your initial position is : " + position);		
 		
+
+		int rollCount = 0;
 		while(position!=100){
 			int roll = (int) (Math.random() * 6) + 1;
+			rollCount++;
 			System.out.println("Dice roll number: " + roll);
 		
 			int option = (int) (Math.random() * 3);
@@ -36,7 +39,7 @@ public class SnakeLadder{
 		}
 
 		System.out.println("Congratulations You won the game");
-
+		System.out.println("Total number of times dice was rolled: " + rollCount);
 	}
 	
 }
