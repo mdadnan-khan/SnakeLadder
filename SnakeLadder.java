@@ -25,7 +25,7 @@ public class SnakeLadder{
 					System.out.println("Oops you got bit by a snake");
 					break;
 				case LADDER:
-					position  = (position+roll<=100) ? position + roll : 100;
+					position  = position + roll;;
 					System.out.println("You got a ladder and your position increased by " + roll + " steps");
 					break;
 				case NO_PLAY:
