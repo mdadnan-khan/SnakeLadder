@@ -13,7 +13,7 @@ public class SnakeLadder{
 		int position = 0;
 		System.out.println("Your initial position is : " + position);		
 		
-		while(position<100){
+		while(position!=100){
 			int roll = (int) (Math.random() * 6) + 1;
 			System.out.println("Dice roll number: " + roll);
 		
@@ -25,7 +25,7 @@ public class SnakeLadder{
 					System.out.println("Oops you got bit by a snake");
 					break;
 				case LADDER:
-					position  = (position+roll<=100) ? position + roll : 100;
+					position  = (position+roll<=100) ? position + roll : position;
 					System.out.println("You got a ladder and your position increased by " + roll + " steps");
 					break;
 				case NO_PLAY:
